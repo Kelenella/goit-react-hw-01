@@ -1,0 +1,32 @@
+.statistics {
+  margin-right: auto;
+  margin-left: auto;
+  width: 400px;
+
+  background-color: var(--cart-background);
+  box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
+}
+
+.title {
+  padding: 25px;
+}
+
+.statList {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.item {
+  padding: 25px;
+  width: 80px;
+}
+
+.percentage,
+.label {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  margin-bottom: 15px;
+}

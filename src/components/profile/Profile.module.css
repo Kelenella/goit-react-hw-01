@@ -1,0 +1,71 @@
+.profile {
+  margin-right: auto;
+  margin-left: auto;
+  width: 350px;
+  height: 500px;
+  background-color: var(--card-background);
+  box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
+}
+
+.description {
+  padding: 25px 50px 0 50px;
+  margin-bottom: 19px;
+}
+.avatar {
+  margin: 25px auto;
+  width: 200px;
+  height: auto;
+  border-radius: 20%;
+  background-color: var(--body-background);
+  outline: 1px solid var(--image-border);
+  box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
+}
+.stats {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: var(--stats-background);
+}
+p {
+  color: rgb(5, 1, 8);
+  font-size: 16px;
+  text-align: center;
+}
+.label {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: var(--info-color);
+}
+.quantity {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-size: 17px;
+  font-style: bold;
+}
+.statsFollowers,
+.statsViews,
+.statsLikes {
+  border-top: 1px solid var(--info-color);
+  border-left: 1px solid var(--info-color);
+  border-bottom: 1px solid var(--info-color);
+  color: var(--text-color);
+}
+.statsLikes {
+  border-right: 1px solid var(--info-color);
+}
+.statsFollowers {
+  padding-right: 14px;
+  padding-left: 14px;
+}
+
+.statsLikes,
+.statsViews {
+  padding-right: 27px;
+  padding-left: 28px;
+}

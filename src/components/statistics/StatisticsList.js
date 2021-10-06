@@ -1,10 +1,16 @@
 import PropTypes from 'prop-types';
 import statData from '../../statistical-data.json';
 import Statistics from './Statistics';
+import s from './StatisticsList.module.css';
 
+const createRandomColor = () => {
+  return `rgb(${(Math.random() * 255) << 0}, ${(Math.random() * 255) << 0}, ${
+    (Math.random() * 255) << 0
+  })`;
+};
 function StatisticsList({ items }) {
   return (
-    <ul className="stat-list">
+    <ul className={s.statList}>
       {statData.map(item => (
         <li key={item.id}>
           <Statistics
