@@ -3,10 +3,17 @@ import s from './FriendList.module.css';
 
 export default function Friends({ isOnline, avatar, name, id }) {
   return (
-    <li key={id}>
-      <span className={s.status}>{isOnline}</span>
-      <img className="avatar" src={avatar} alt={name} width="48" />
-      <p className="name">{name}</p>
+    <li className={s.item} key={id}>
+      <span
+        className={s.status}
+        style={{
+          backgroundColor: isOnline ? 'green' : 'red',
+        }}
+      >
+        {isOnline}
+      </span>
+      <img className={s.avatar} src={avatar} alt={name} width="48" />
+      <p className={s.name}>{name}</p>
     </li>
   );
 }

@@ -4,7 +4,7 @@
   width: 350px;
   height: 500px;
   background-color: var(--card-background);
-  box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
+  box-shadow: 5px 5px 5px rgba(51, 51, 52, 0.639);
 }
 
 .description {
@@ -18,15 +18,16 @@
   border-radius: 20%;
   background-color: var(--body-background);
   outline: 1px solid var(--image-border);
-  box-shadow: 10px 5px 5px rgba(51, 51, 52, 0.639);
+  box-shadow: 5px 5px 5px rgba(51, 51, 52, 0.639);
 }
 .stats {
-  padding: 0;
+  padding: 5px;
   margin: 0;
   list-style: none;
   display: flex;
   justify-content: center;
-  background-color: var(--stats-background);
+  align-items: center;
+  background-color: var(--card-background);
 }
 p {
   color: rgb(5, 1, 8);
@@ -51,9 +52,8 @@ p {
 .statsFollowers,
 .statsViews,
 .statsLikes {
-  border-top: 1px solid var(--info-color);
-  border-left: 1px solid var(--info-color);
-  border-bottom: 1px solid var(--info-color);
+  border: 1px solid var(--info-color);
+
   color: var(--text-color);
 }
 .statsLikes {

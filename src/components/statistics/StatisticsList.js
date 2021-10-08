@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-import statData from '../../statistical-data.json';
-import Statistics from './Statistics';
 import s from './StatisticsList.module.css';
 
 const createRandomColor = () => {
@@ -8,25 +6,35 @@ const createRandomColor = () => {
     (Math.random() * 255) << 0
   })`;
 };
-function StatisticsList({ items }) {
+
+const StatisticsList = ({ title, stats }) => {
   return (
-    <ul className={s.statList}>
-      {statData.map(item => (
-        <li key={item.id}>
-          <Statistics
-            id={item.id}
-            label={item.label}
-            percentage={item.percentage}
-          />
-        </li>
-      ))}
-    </ul>
+    <section className={s.statistics}>
+      {title && <h2 className={s.title}>{title}</h2>}
+
+      <ul className={s.statList}>
+        {stats.map(({ id, label, percentage }) => (
+          <li
+            key={id}
+            className={s.item}
+            style={{ backgroundColor: createRandomColor() }}
+          >
+            <span className={s.label}>{label}</span>
+            <span className={s.percentage}>{percentage}%</span>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
-}
+};
+
 StatisticsList.propTypes = {
-  items: PropTypes.arrayOf(
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
     }),
   ),
 };
